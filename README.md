@@ -8,7 +8,7 @@ Dockerビルド
   2．docker-compose up -d --build
 ＊MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集して下さい。
 
-Lalavel環境構築
+＃＃Lalavel環境構築
 　1.docker-compose exec php bash
   2.composer install
   3.cp .env.example .env
