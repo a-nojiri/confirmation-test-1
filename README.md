@@ -3,10 +3,14 @@
 ## 環境構築
 ### Dockerビルド
 ```bash
-  1.リポジトリをクローン
+  1.リポジトリをクローン:
+     ```bash
  　　git clone https://github.com/a-nojiri/confirmation-test-1.git
 　　cd confirmation-test-1
-  2.docker-compose up -d --build
+  2.Dockerを起動：
+    ```bash
+    docker-compose up -d --build
+
 ＊MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集して下さい。
 
 ### Laravel構築
