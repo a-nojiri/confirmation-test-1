@@ -21,7 +21,7 @@ class ContactController extends Controller
             'first_name' => ['required', 'string', 'max:255'],
             'gender' => ['required', 'in:male,female,other'],
             'email' => ['required', 'email'],
-            'tel' => ['required', 'digits:5'], // 5桁の数字のみ
+            'tel' => ['required', 'digits:11'], // 11桁の数字のみ(携帯番号)
             'address' => ['required', 'string', 'max:255'],
             'building_name' => ['nullable', 'string', 'max:255'],
             'category_id' => ['required', 'exists:categories,id'],

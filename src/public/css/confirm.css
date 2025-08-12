@@ -1,0 +1,144 @@
+:root {
+    --bg: #fff;
+    --panel: #ffffff;
+    --title: #b39b86;
+    /* 見本の優しいベージュ系 */
+    --left: #b39b86;
+    /* 左列セルの色 */
+    --left-text: #fff;
+    --border: #e6e1dc;
+    --text: #5a554f;
+    --muted: #9b9186;
+    --btn: #b39b86;
+}
+
+.confirm-form {
+    max-width: 860px;
+    margin: 64px auto 80px;
+    padding: 0 20px;
+    color: var(--text);
+}
+
+.confirm-form__title {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: .06em;
+    color: var(--title);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.confirm-form__heading {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: .04em;
+    color: var(--muted);
+    margin: 0 0 28px;
+    font-weight: 500;
+}
+
+.confirm-form__panel {
+    background: var(--panel);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .06);
+    border-radius: 8px;
+    padding: 28px;
+}
+
+.confirm-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    overflow: hidden;
+    /* 角丸を効かせる */
+    table-layout: fixed;
+}
+
+.confirm-table th,
+.confirm-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.confirm-table tr:last-child th,
+.confirm-table tr:last-child td {
+    border-bottom: none;
+}
+
+.confirm-table th {
+    width: 32%;
+    background: var(--left);
+    color: var(--left-text);
+    font-weight: 600;
+    text-align: left;
+}
+
+.confirm-table td {
+    background: #fff;
+    color: var(--text);
+    word-break: break-word;
+}
+
+.confirm-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.btn {
+    min-width: 120px;
+    height: 40px;
+    padding: 0 20px;
+    border-radius: 999px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: .05em;
+}
+
+.btn--primary {
+    background: var(--btn);
+    color: #fff;
+    border-color: var(--btn);
+}
+
+.btn--primary:hover {
+    opacity: .92;
+}
+
+.btn--ghost {
+    background: #fff;
+    color: var(--btn);
+    border-color: var(--btn);
+}
+
+.btn--ghost:hover {
+    background: rgba(179, 155, 134, .08);
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+    .confirm-form__panel {
+        padding: 18px;
+    }
+
+    .confirm-table th,
+    .confirm-table td {
+        padding: 12px 14px;
+        font-size: 13px;
+    }
+
+    .confirm-actions {
+        gap: 12px;
+    }
+
+    .btn {
+        min-width: 110px;
+        height: 38px;
+    }
+}

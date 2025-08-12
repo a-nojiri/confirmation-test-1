@@ -1,0 +1,176 @@
+:root {
+    --bg: #fff;
+    --title: #b39b86;
+    /* 見本のベージュ */
+    --muted: #9b9186;
+    --text: #5a554f;
+    --border: #e6e1dc;
+    --fill: #f7f4f1;
+    --btn: #b39b86;
+}
+
+.contact-form__content {
+    max-width: 860px;
+    margin: 64px auto 80px;
+    padding: 0 20px;
+    color: var(--text);
+}
+
+.contact-form__title {
+    text-align: center;
+    font-size: 32px;
+    letter-spacing: .06em;
+    color: var(--title);
+    margin-bottom: 24px;
+    font-weight: 500;
+}
+
+.contact-form__heading h2 {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: .04em;
+    color: var(--muted);
+    margin: 0 0 28px;
+    font-weight: 500;
+}
+
+.form {
+    background: #fff;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .06);
+    border-radius: 8px;
+    padding: 28px;
+}
+
+.form__group {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    align-items: center;
+    gap: 14px 18px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.form__group:last-child {
+    border-bottom: none;
+}
+
+.form__group-title {
+    text-align: right;
+    color: var(--text);
+    font-weight: 600;
+}
+
+.form__label--required {
+    color: var(--muted);
+    margin-left: 6px;
+}
+
+.form__group-content input[type="text"],
+.form__group-content input[type="email"],
+.form__group-content textarea,
+.form__group-content select {
+    width: 100%;
+    background: var(--fill);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 12px 14px;
+    outline: none;
+    font-size: 14px;
+    transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+.form__group-content textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.form__group-content input:focus,
+.form__group-content textarea:focus,
+.form__group-content select:focus {
+    border-color: var(--btn);
+    box-shadow: 0 0 0 3px rgba(179, 155, 134, .15);
+}
+
+.form__group-content.name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form__group-content.gender {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.form__group-content.gender input[type="radio"] {
+    accent-color: var(--btn);
+}
+
+/* セレクトの矢印をそれっぽく */
+.form__group-content select {
+    appearance: none;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--muted) 50%),
+        linear-gradient(135deg, var(--muted) 50%, transparent 50%),
+        linear-gradient(to right, transparent, transparent);
+    background-position:
+        calc(100% - 24px) calc(50% - 3px),
+        calc(100% - 18px) calc(50% - 3px),
+        100% 0;
+    background-size: 6px 6px, 6px 6px, 2.5rem 100%;
+    background-repeat: no-repeat;
+    padding-right: 48px;
+}
+
+/* エラーメッセージ */
+.form__error {
+    grid-column: 2 / 3;
+    color: #c65151;
+    font-size: 12px;
+    margin-top: -8px;
+}
+
+/* 送信ボタン */
+.form__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.form__button-submit {
+    min-width: 160px;
+    height: 42px;
+    padding: 0 24px;
+    border-radius: 999px;
+    border: 1px solid var(--btn);
+    background: var(--btn);
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: .05em;
+    cursor: pointer;
+}
+
+.form__button-submit:hover {
+    opacity: .92;
+}
+
+/* プレースホルダー薄色 */
+::placeholder {
+    color: #c3bbb3;
+}
+
+/* スマホ */
+@media (max-width: 640px) {
+    .form__group {
+        grid-template-columns: 1fr;
+    }
+
+    .form__group-title {
+        text-align: left;
+    }
+
+    .form__group-content.name {
+        grid-template-columns: 1fr;
+    }
+}

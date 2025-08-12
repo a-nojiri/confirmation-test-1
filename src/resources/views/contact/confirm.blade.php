@@ -11,7 +11,7 @@
       <h2>Confirm</h2>
     </div>
 
-    <form class="form" action="/contacts/send" method="post">
+    <form action="{{ route('contacts.send') }}" method="post">
       @csrf
       <table class="form__table">
         <tr><th>お名前</th><td>{{ $contact['last_name'] }} {{ $contact['first_name'] }}</td></tr>
@@ -33,6 +33,7 @@
 
       <div class="form__buttons">
         <button type="submit" class="form__button-submit">送信</button>
+      </div>  
     </form>
 
     <form method="post" action="/contacts/back" class="form__back">

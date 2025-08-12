@@ -14,6 +14,18 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', [ContactController::class, 'index']);
-Route::post('/confirm', [ContactController::class, 'confirm']);
-Route::post('/thanks', [ContactController::class, 'send']);
+Route::get('/', [ContactController::class, 'index'])->name('contacts.index');
+Route::post('/contacts/confirm', [ContactController::class, 'confirm'])
+    ->name('contacts.confirm');
+Route::post('/contacts/send', [ContactController::class, 'send'])
+    ->name('contacts.send');
+Route::get('/thanks', [ContactController::class, 'thanks'])
+    ->name('contacts.thanks');
+
+    
+
+
+
+Route::get('/thanks', function () {
+    return view('contact.thanks');
+});    
