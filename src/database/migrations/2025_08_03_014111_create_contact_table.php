@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('tel');
             $table->string('address');
-            $table->string('building')->nullable();
+            $table->string('building_name')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->text('content');
             $table->timestamps();
