@@ -1,5 +1,5 @@
 ## **お問い合わせホーム**
-ｰｰｰ
+
 
 ## 環境構築
 Dockerビルド
@@ -14,7 +14,7 @@ Dockerビルド
   
 ＊MySQLは、OSによって起動しない場合があるのでそれぞれのPCに合わせてdocker-compose.ymlファイルを編集して下さい。
 
-  ---
+  
 ## Laravel環境構築  
 
 　1. docker-compose exec php bash
@@ -29,7 +29,7 @@ Dockerビルド
   
   6. php artisan db:seed
   
-  ---
+  
 ## 使用技術(実行環境)
 
   　･ PHP 8.0
@@ -42,10 +42,10 @@ Dockerビルド
  
 　･　Nginx
  
-　ｰｰｰ
+　
 ## ER図
 　![ER図](./er.png)
-ｰｰｰ
+
 ## URL
 　･　開発環境： http://localhost
  
